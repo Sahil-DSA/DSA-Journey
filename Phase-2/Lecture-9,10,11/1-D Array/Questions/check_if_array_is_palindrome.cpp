@@ -38,11 +38,11 @@ int main(){
      cout<<"\b}";
      for(int i=0;i<size;i++){
     if(arr_1[i]==arr_2[i]){
-       count++;
+       count++; 
     }
 }
     if(count==size){
-         cout<<endl<<"Yes! it is a palindrome.";
+   cout<<endl<<"Yes! it is a palindrome.";
     }
     else {
         cout<<endl<<" No! it is not a palindrom.";
