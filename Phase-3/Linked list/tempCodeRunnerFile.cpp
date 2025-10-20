@@ -1,1 +1,1 @@
-l1.print();
+    l1.delition(3);

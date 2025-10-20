@@ -94,6 +94,32 @@ class List{
     }
 }
     }
+void delition(int val){
+    Node* temp =head;
+    int x=1;
+    while(temp!=NULL){
+        if(temp->data==val){
+           break;
+        }
+        x++;
+        temp=temp->next;
+    } 
+    if(x==1){
+        pop_front();
+    }
+    else{
+    int y=1;
+    Node*temp2=head;
+    while(y<x-1){
+        temp2=temp2->next;
+        y++;
+    }
+    temp2->next=temp->next;
+    temp->next=NULL;
+    delete temp;
+    }
+}
+
     // Searching any element in the list------
     void search(int val){  //0(n)
      Node*temp=head;
@@ -120,6 +146,7 @@ class List{
             temp= temp->next;
         }
         cout<<"NUll"<<endl;
+
     }
 };
 int main(){
@@ -134,8 +161,8 @@ int main(){
     // l1.insert(7,1);
     // l1.insert(6,01);
     // l1.print();
-    l1.search(5);
-
-
+    // l1.search(5);
+    l1.delition(5);
+    l1.print();
     return 0;
 }
